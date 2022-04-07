@@ -5,11 +5,20 @@
 			"referenceName": "AzureBlobStorage2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"abc": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().abc",
+					"type": "Expression"
+				},
 				"container": "test17"
 			},
 			"columnDelimiter": ",",
