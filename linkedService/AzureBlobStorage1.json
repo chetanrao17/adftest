@@ -5,7 +5,11 @@
 		"type": "AzureBlobStorage",
 		"typeProperties": {
 			"serviceEndpoint": "https://teststorageaccount20.blob.core.windows.net",
-			"accountKind": "BlobStorage"
+			"accountKind": "StorageV2",
+			"credential": {
+				"referenceName": "credential1",
+				"type": "CredentialReference"
+			}
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
